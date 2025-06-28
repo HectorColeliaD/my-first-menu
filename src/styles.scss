@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    font-family: 'Montserrat';
+    --primary-color:#a20;
+    --secondary-color:#e92;
+    --white: #fff;
+    --crust: #500;
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--secondary-color);
+    backdrop-filter: brightness(80%);
+    min-height: 100vh;
+}
+
+app-root {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    
+}
+
+app-pizzas-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: clamp( 600px , 40vw, 650px);
+    height: 60vh;
+    text-align: center;
+
+    margin-top: 200px;
+    z-index: inherit;
+    box-shadow: 2px 0px 2px #333;
+
+}
