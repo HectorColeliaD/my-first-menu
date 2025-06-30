@@ -18,6 +18,8 @@ export class PizzasListComponent  {
 
   indiceActual = input<number>();
 
+  
+
   esSeleccionada(pizza: tastesList): boolean {
   const lista = this.pizzas?.();
   const idx = this.indiceActual?.();

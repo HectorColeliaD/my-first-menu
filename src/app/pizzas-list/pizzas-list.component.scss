@@ -3,19 +3,19 @@ h3 {
     padding: 6px 10px;
     background: var(--crust);
     color: var(--white);
-    font-size: 1.5em;
+    font-size: 2.5em;
     box-shadow: inset 1px 1px 6px #222, 1px 1px 5px #222;
 }
 
 
 
 .pizzasContainer {
-    height: 100%;
-    box-shadow: inset 2px 2px 5px #e61;
+    height: 45%;
+
 }
 
 ul {
-    background: var(--secondary-color);
+    background: transparent;
     height: 100%;
     width: 100%;
     color: var(--white);
@@ -29,33 +29,69 @@ ul {
 .elementoEnLista {
     position: relative;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding: 5px 10px;
-    
+    opacity: 0;
+    display: none;
 }
 
 
 .elementoSeleccionado {
-    background: var(--crust);
+    display: block;
     box-shadow: 2px 2px 5px #000;
-    transition: .5s all ease;
+    opacity: 1;
+    transition: .5s opacity ease;
 }
 
 .elementoSeleccionado::before {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     
     right: -15px;
     bottom: 4px;
     z-index: -1;
     rotate: 45deg;
-    background: inherit;
+    background: var(--crust);
 }
 
-.taste, .price {
+
+
+.taste {
     font-size: 2em;
+    position: relative;
+    padding: 5px 10px;
+    background: var(--crust);
+
+}
+.price {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.pizzaInfo {
+    position: absolute;
+    width: 100%;
+    
+    top: 0;
+    left: 0;
+    background: var(--secondary-color);
+    z-index: -1;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: opening 1s ease-in-out both;
+}
+.prices {
+    display: flex;
+    justify-content: space-between;
+}
+.small {
+    margin-left: 60%;
+}
+.big {
+    margin-right: 30px;
 }

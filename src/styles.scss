@@ -32,17 +32,23 @@ app-pizzas-list{
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    width: clamp( 600px , 40vw, 650px);
+    width: clamp( 700px , 50vw, 750px);
     height: 60vh;
     text-align: center;
     top: 20px;
 
     z-index: inherit;
-    margin-left: 20px;
     border-radius: 10px 10px 0 0;
 }
 
 app-pizza-img {
     width: 100%;
     height: 100%;
+}
+
+@keyframes opening {
+    to {
+        height: min-content;
+        padding: 80px 5px 5px 5px;
+    }
 }
