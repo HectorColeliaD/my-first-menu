@@ -2,7 +2,11 @@
 <div class="pizzasContainer">
     <ul class="{{ claseDeLista() }}">
         @for (pizza of pizzas(); track pizza.id) {
-            <div class="elementoEnLista">
+            <div
+            class="elementoEnLista"
+
+            [ngClass]="{ 'elementoSeleccionado': esSeleccionada(pizza) }">
+
                 <div class="taste">{{pizza.taste}}</div>
                 <div class="price">{{pizza.price}}</div>
             </div>

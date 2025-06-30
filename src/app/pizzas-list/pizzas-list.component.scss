@@ -1,20 +1,21 @@
 h3 {
-    border-radius: 0 0 10px 10px;
+    border-radius: inherit;
     padding: 6px 10px;
     background: var(--crust);
     color: var(--white);
     font-size: 1.5em;
+    box-shadow: inset 1px 1px 6px #222, 1px 1px 5px #222;
 }
 
 
 
 .pizzasContainer {
     height: 100%;
+    box-shadow: inset 2px 2px 5px #e61;
 }
 
 ul {
     background: var(--secondary-color);
-    padding: 20px;
     height: 100%;
     width: 100%;
     color: var(--white);
@@ -26,10 +27,33 @@ ul {
 }
 
 .elementoEnLista {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: start;
+    padding: 5px 10px;
+    
+}
+
+
+.elementoSeleccionado {
+    background: var(--crust);
+    box-shadow: 2px 2px 5px #000;
+    transition: .5s all ease;
+}
+
+.elementoSeleccionado::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    
+    right: -15px;
+    bottom: 4px;
+    z-index: -1;
+    rotate: 45deg;
+    background: inherit;
 }
 
 .taste, .price {

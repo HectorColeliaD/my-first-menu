@@ -1,16 +1,22 @@
 <div class="menu-container">
 
-
-    <div class="clasicasContainer">
-        <app-pizzas-list titulo="PIZZAS CLASICAS" [pizzas]="pizzasClasicas" claseDeLista="clasicas"></app-pizzas-list>
-    </div>
     <div class="logoContainer">
         <img src="logo.png" alt="">
     </div>
+
+    <div class="clasicasContainer">
+        <app-pizzas-list titulo="PIZZAS CLASICAS" [pizzas]="pizzasClasicas" claseDeLista="clasicas" 
+        [indiceActual]="indiceActual"
+        ></app-pizzas-list>
+    </div>
+    
     <div class="especialesContainer">
         <app-pizzas-list titulo="PIZZAS ESPECIALES" [pizzas]="pizzasEspeciales" claseDeLista="especiales"></app-pizzas-list>
     </div>
     
+    <div class="imgPizzaContainer">
+        <img [src]="pizzaSeleccionada.img" [alt]="pizzaSeleccionada.taste">
+    </div>
 
 </div>
 
